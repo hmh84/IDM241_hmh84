@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDM 241</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header shadow>
+        <h1>IDM 241 - Alpha: Netflix NavBar Micro Interaction</h1>
+        <a href="https://www.netflix.com/browse">
+            <h2>https://www.netflix.com/browse</h2>
+        </a>
+    </header>
+    <main>
+        <h2>- Current state of the NavBar Micro Interaction -</h2>
+        <div class="row" id="row_1" shadow>
+            <div class="leftSide">
+                <video id="vid" controls controlsList="nodownload" shadow>
+                    <source src="graphics/currentInteraction.mov" type="video/mp4">
+                </video>
+                <script>
+                    vid=document.getElementById("vid")
+                    vid.disablePictureInPicture = true;
+                </script>
+            </div>
+            <div class="rightSide">
+                <h3>Triggers</h3>
+                <p>On-Hover, Off-Hover, On-Click.</p>
+                <h3>Rules</h3>
+                <p>On-Hover: Ease, darken font.</p>
+                <p>Off-Hover: Ease, lighten back to default.</p>
+                <p>On-Click: Navigate to respective page & Make clicked text full white color.</p>
+                <h3>Feedback</h3>
+                <p>Visual: On-Hover, the darkened font indicates/validates pointer focus.</p>
+                <p>Visual: On-Click, respective page appears, clicked text turns full white, indicating website location.</p>
+                <h3>Loops & Modes</h3>
+                <p>Mode: If the user scrolls down at all, the navbar receives full black background color and cannot be clicked on.</p>
+                <p>Mode: While on a page, the respective nav button will be full white text and cannot be clicked on.</p>
+            </div>
+        </div>
+        <h2>- Concept for redesigned Micro Interaction -</h2>
+        <div class="row" id="row_2" shadow>
+            <div class="leftSide">
+                <h3>Triggers</h3>
+                <p>On-Hover, Off-Hover, On-Click.</p>
+                <h3>Rules</h3>
+                <p>On-Hover: First create a dark gray, rounded ellipse behind the icon. Next expand the ellipse to the right while simultaneously fading in text respective of the icon's page. Finally draw a white underline starting from left, expanding to the right.</p>
+                <p>Off-Hover: Rewind the effects of on-hover.</p>
+                <p>On-Click: Navigate to respective page & Make clicked text full white color.</p>
+                <h3>Feedback</h3>
+                <p>Visual: On-Hover, the darkened font indicates/validates pointer focus.</p>
+                <p>Visual: On-Click, respective page appears, clicked text turns full white, indicating website location.</p>
+                <h3>Loops & Modes</h3>
+                <p>Mode: If the user scrolls down at all, the navbar receives full black background color.</p>
+                <p>Mode: While on a page, the respective nav button will be in the hover state w/o underlined text and cannot be clicked on.</p>
+            </div>
+            <div class="rightSide">
+                <h3>Concept Image:</h3>
+                <img src="graphics/newInteraction.jpg" alt="New Interaction Photo">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <a href="https://www.hunterhdesign.com" target="_blank">
+            <div id="credits">
+                <p>Created by: Hunter H Design</p>
+            </div>
+        </a>
+    </footer>
+</body>
+</html>
