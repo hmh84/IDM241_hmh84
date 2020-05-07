@@ -3,39 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>IDM 241 - Alpha Build</title>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="css/microint.css">
 </head>
 <body>
-    <div class="interaction-container">
-        <div class="circle">
-            <img src="graphics/home.svg" alt="">
-            <div class="content-box">
-                <div class="inner-box">
-                    <p>Home</p>
-                    <div class="line"></div>
+    <main>
+        <div class="interaction-container">
+            <div class="circle">
+                <img src="graphics/home.svg" alt="">
+                <div class="content-box">
+                    <div class="inner-box">
+                        <p>Home</p>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="circle">
+                <img src="graphics/tv.svg" alt="">
+                <div class="content-box">
+                    <div class="inner-box">
+                        <p>TV</p>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="circle">
+                <img src="graphics/film.svg" alt="">
+                <div class="content-box">
+                    <div class="inner-box">
+                        <p>Movies</p>
+                        <div class="line"></div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="circle">
-            <img src="graphics/tv.svg" alt="">
-            <div class="content-box">
-                <div class="inner-box">
-                    <p>TV</p>
-                    <div class="line"></div>
-                </div>
+        <h1>Redesigned Netflix NavBar Micro Interaction</h1>
+        <div id="notes">
+            <div>
+                <h2>Triggers</h2>
+                    <p>On-Hover, Off-Hover.</p>
+                <h2>Rules</h2>
+                    <h3>On-Hover:</h3>
+                        <p>- First create a dark gray, ellipse behind the icon.</p>
+                        <p>- Next expand the ellipse to the right.</p>
+                        <p>- Next fade in text respective of the icon's destination.</p>
+                        <p>- Finally draw a white underline starting from left, expanding to the right.</p>
+                    <h3>Off-Hover:</h3>
+                        <p> Rewind the effects of On-Hover.</p>
+            </div>
+            <div>
+                <h2>Feedback</h2>
+                    <h3>Visual:</h3>
+                        <p>On-Hover, the darkened font indicates/validates pointer focus.</p>
+                <h2>Loops & Modes</h2>
+                    <p>None.</p>
             </div>
         </div>
-        <div class="circle">
-            <img src="graphics/film.svg" alt="">
-            <div class="content-box">
-                <div class="inner-box">
-                    <p>Movies</p>
-                    <div class="line"></div>
-                </div>
-            </div>
-        </div>
-    </div>
+    </main>
+    <footer>
+        <a href="https://www.hunterhdesign.com" target="_blank">
+            Created by: Hunter H Design
+        </a>
+    </footer>
 </body>
 </html>

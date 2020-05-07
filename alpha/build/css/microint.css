@@ -1,5 +1,47 @@
+:root {
+	--primary-black: rgb(20, 20, 20);
+	--primary-gray: rgb(52, 52, 52, 0);
+}
+
 body {
-	background-color: rgb(20, 20, 20);
+	background-color: var(--primary-black);
+	color: white;
+	font-family: sans-serif;
+	padding: 0 10%;
+	height: 100vh;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 80vh;
+}
+
+#notes {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 0 5%;
+}
+
+h1 {
+	text-align: center;
+	margin: 0;
+}
+
+#notes h2 {
+	margin: 2rem 0;
+}
+
+#notes h3 {
+	font-weight: normal;
+	font-size: 1rem;
+}
+
+#notes p {
+	text-indent: 3rem;
+	font-size: 1rem;
 }
 
 .interaction-container {
@@ -7,7 +49,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
-	margin: 5rem 45%;
+	margin: 1rem 40% 0;
 	transform: scale(2);
 }
 
@@ -19,7 +61,7 @@ body {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	background-color: rgb(52, 52, 52, 0);
+	background-color: var(--primary-gray);
 	margin: 0 1rem;
 }
 
@@ -46,16 +88,13 @@ img {
 }
 
 .circle p{
-	color: white;
-	font-family: sans-serif;
+	color: var(--primary-gray);
 	margin: 0;
-	opacity: 0;
 }
 
 .line {
-	background-color: white;
+	background-color: var(--primary-gray);
 	height: .15rem;
-	opacity: 0;
 	transform: translateX(-2rem);
 	width: 0;
 }
@@ -69,7 +108,6 @@ img {
 
 .circle:hover {
 	background-color: rgb(52, 52, 52, 100);
-	opacity: 1;
 }
 
 .circle:hover:first-of-type {
@@ -90,16 +128,18 @@ img {
 
 .circle:hover .line {
 	width: 100%;
+	background-color: white;
 }
 
 .circle:hover p, .circle:hover .line {
 	position: relative;
 	opacity: 1;
+	color: white;
 }
 
 /* Disable Defaults */
 
-p:hover {
+p:hover, h1:hover, h2:hover, h3:hover {
 	cursor: default;
 }
 
@@ -110,4 +150,32 @@ p:hover {
     -moz-user-select: none; /* Old versions of Firefox */
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none;
+}
+
+/* Footer */
+
+footer {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+	transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+}
+
+footer a {
+	margin: auto;
+	text-align: center;
+	color: white;
+	text-decoration: none;
+	padding: .5rem 1rem;
+	transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+}
+
+footer a:hover {
+	background-color: white;
+	color: var(--primary-black);
 }
