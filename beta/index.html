@@ -2,19 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>IDM 241 - Beta</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <header>
-        <h1>IDM 241 - Beta</h1>
-        <h2>Micro Interaction Redesign for ???</h2>
+    <header shadow>
+        <h1>IDM 241 - Beta: Micro Interaction Redesign for Grammarly</h1>
     </header>
     <main>
-        <h2>Current State:</h2>
+        <div id="spacer"></div>
+        <h1 class="title">Current State</h1>
+        <div class="side-wrapper" shadow>
+            <div class="side">
+                <video id="vid" controls controlsList="nodownload" shadow src="graphics/screen-cap.mov"></video>
+                <script>
+                    vid = document.getElementById("vid");
+                    vid.disablePictureInPicture = true;
+                </script>
+            </div>
+            <div class="side" id="side-no-padd">
+                <h3>Thoughts</h3>
+                <p>Currently, the micro interaction is very static. There is no transition/easing into the main hover state.</p>
+                <p>This micro interaction contains a child micro interaction when hovering over the icons that appear after the initial hover.</p>
+                <p class="break">-</p>
+                <p>I would like to bring an eased transitional quality as well as improve the indicative qualities using CSS.</p>
+            </div>
+        </div>
+        <h1 class="title">Concept for redesign</h1>
+        <div class="side-wrapper" shadow>
+            <div class="side" id="side-sub">
+                <div class="side-sub">
+                    <h3>Triggers</h3>
+                    <p>On-Hover, Off-Hover</p>
+                    <h3>Rules</h3>
+                    <p>On-Hover: Main Box</p>
+                    <p>- First apply fog effect over box content and increase shadow intensity.</p>
+                    <p>- Then move download and trash icons in from sides.</p>
+                    <p>On-Hover: Download & Trash Icons</p>
+                    <p>- Change Download Icon fill to Grammarly Green, Trash Icon to red.</p>
+                    <p>On-Hover: Red # Tab</p>
+                    <p>- Show alert description w/ shadow.</p>
+                    <p>Off-Hover: Rewind the effects of on-hover.</p>
+                </div>
+                <div class="side-sub">
+                    <h3>Feedback</h3>
+                    <p>Visual: On-Hover - Main Boxes, ease in shadow increase and fog effect.</p>
+                    <p>Visual: On-Hover - Download & Trash Icons, slide towards center from outside Main Box boundaries.</p>
+                    <p>Visual: On-Hover - Download & Trash Icons, ease in green or red fill.</p>
+                    <p>Visual: On-Hover - Red # Tab, fade in alert description bubble.</p>
+                    <h3>Loops & Modes</h3>
+                    <p>None.</p>
+                </div>
+            </div>
+            <div class="side" id="side-img">
+                <img src="graphics/concept.jpg" alt="Concept Photo" shadow>
+            </div>
+        </div>
     </main>
-    <footer>
-        <a href="hunterhdesign.com">Created By: Hunter H Design</a>
-    </footer>
 </body>
 </html>
