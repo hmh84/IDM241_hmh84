@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    --primary-black: #202020;
+    --secondary-black: #505050;
+
+    --red: rgb(197, 6, 6);
+    --green: rgb(53, 212, 159);
+}
+
+[shadow] {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+body {
+    background-color: var(--primary-black);
+}
+
+
+#microint-container {
+    background-color: white;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 3rem;
+}
+
+.card {
+    width: 10rem;
+    height: 10rem;
+    overflow: hidden;
+    margin: 1rem;
+}
+
+.card-content {
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+.text-wrapper {
+    position: relative;
+    height: 8rem;
+    overflow-y: hidden;
+    transform: translateY(-4rem);
+}
+
+.card h2 {
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+.card p {
+    color: var(--secondary-black);
+    font-size: 15px;
+}
+
+.tab {
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+    transform: translateX(5rem) translateY(-1rem);
+    padding: .75rem;
+    background-color: var(--red);
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 0);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 0);
+    z-index: 10;
+}
+
+
+.tab h2 {
+    color: white;
+    float: right;
+    font-weight: 700;
+}
+
+#no-tab {
+    opacity: 0;
+}
+
+.fog {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-10rem);
+    padding-top: 4rem;
+}
+
+.fog h2 {
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+}
+
+.icons {
+    height: 2rem;
+    width: 200%;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    opacity: 0;
+}
+
+.icons svg {
+    width: 2.5rem;
+    fill: var(--primary-black);
+    z-index: 15;
+}
+
+/* Hover States */
+
+.fog, .icons, .fog h2, .icon-download, .icon-trash {
+    transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card:hover .fog{
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.card:hover .icons {
+    width: 100%;
+}
+
+.card:hover .fog h2, .card:hover .icons {
+    opacity: 1;
+}
+
+.icon-download:hover {
+    fill: var(--green)
+}
+
+.icon-trash:hover {
+    fill: var(--red);
+}
+
+/* Notes */
+
+#title {
+    text-align: center;
+    /* color: var(--green); */
+    color: white;
+    margin: 2rem 0 0 1em;
+}
+
+#notes {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.note-box {
+    width: 20rem;
+    border-radius: .75rem;
+    margin: 2rem;
+}
+
+:root {
+    --radius: .75rem;
+    /* Standard radius for all Note Box borders */
+}
+
+.note-box-title {
+    padding: .5rem;
+    background-color: var(--green);
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.note-box-title h3 {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.note-box-content p {
+    line-height: 1.5rem;
+    padding-left: 1rem;
+}
+
+.note-box-content {
+    padding: 1rem;
+    border: 3px var(--green) dashed;
+    border-top: none;
+    border-radius: 0 0 var(--radius) var(--radius);
+    height: fit-content;
+}
+
+.note-box-content h3:first-of-type {
+    margin: 0 0 .75rem;
+}
+
+.note-box-content h3 {
+    text-align: center;
+    font-weight: bold;
+    color: var(--green);
+    margin: .75rem 0;
+}
+
+.note-box-content h4 {
+    font-weight: bold;
+    margin: .75rem 0;
+}
+
+.note-box-content h5 {
+    margin: .75rem 0;
+    text-decoration: underline;
+}
+
+.note-box-content * {
+    color: white;
+}
+
+/* Media Queries */
+
+@media only screen and (min-width: 832px) {
+    .note-box-content {
+        height: 27.5rem;
+    }
+}

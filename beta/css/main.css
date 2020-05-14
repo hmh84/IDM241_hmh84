@@ -46,6 +46,10 @@ main, .side-wrapper, .side, video, #side-sub, .side-sub {
     width: 100%;
 }
 
+.side-sub h4 {
+    text-decoration: underline;
+}
+
 main {
     padding: 0 2rem;
 }
@@ -109,6 +113,10 @@ p {
     justify-content: center;
 }
 
+.note-title {
+    color: rgb(53, 212, 159);
+}
+
 .title {
     text-align: center;
     margin: 2rem 0;
@@ -120,4 +128,18 @@ p {
 
 img {
     width: 50%;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 800px) {
+    #side-wrapper-1, #side-sub {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 858px) {
+    #spacer {
+        height: 6.5rem;
+    }
 }

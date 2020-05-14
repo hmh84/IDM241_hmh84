@@ -96,15 +96,6 @@ video::-webkit-media-controls-volume-slider, video::-webkit-media-controls-mute-
     clear: both;
 }
 
-#row_1 {
-    /* height: 660px; */
-    /* Based on height of tallest column (Check Browser) */
-}
-
-#row_2 {
-    /* height: 630px; */
-}
-
 #row_2 .rightSide h3 {
     text-align: center;
     margin-bottom: 1.5em;
@@ -168,9 +159,6 @@ footer {
 }
 
 @media only screen and (max-width: 28em) {
-    :root {
-        /* --header-height: 10em; */
-    }
     header h1, header h2 {
         font-size: 20px;
     }
