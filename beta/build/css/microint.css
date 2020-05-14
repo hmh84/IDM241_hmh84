@@ -32,7 +32,7 @@ body {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    padding: 3rem;
+    padding: 2rem;
 }
 
 .card {
@@ -76,7 +76,6 @@ body {
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 0);
     z-index: 10;
 }
-
 
 .tab h2 {
     color: white;
@@ -159,9 +158,8 @@ body {
 
 #title {
     text-align: center;
-    /* color: var(--green); */
     color: white;
-    margin: 2rem 0 0 1em;
+    margin: 2rem 0 0 0;
 }
 
 #notes {
@@ -170,13 +168,13 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
 }
 
 .note-box {
     width: 20rem;
     border-radius: .75rem;
-    margin: 2rem;
+    margin: 2rem .5rem;
 }
 
 :root {
@@ -236,8 +234,8 @@ body {
 
 /* Media Queries */
 
-@media only screen and (min-width: 832px) {
+@media only screen and (min-width: 672px) {
     .note-box-content {
-        height: 27.5rem;
+        height: 23rem;
     }
 }
