@@ -1,0 +1,57 @@
+const trash_icon = document.querySelectorAll('.icon-trash');
+const trash_confirmation = document.querySelector('#trash-confirm');
+const modal_backdrop = document.querySelector('#modal-backdrop');
+const trash_no = document.querySelector('#trash-no');
+const trash_yes = document.querySelector('#trash-yes');
+
+for (let i = 0; i < 4; i++) {
+        trash_icon[i].addEventListener('click', () => {
+        about_to_delete = trash_icon[i].parentNode.parentNode.parentNode;
+        open_modal();
+    });
+};
+
+trash_no.addEventListener('click', close_modal);
+trash_yes.addEventListener('click', delete_card);
+
+modal_backdrop.addEventListener('click', close_modal);
+
+function close_modal() {
+    modal_backdrop.style.opacity = "0";
+    trash_confirmation.style.opacity = "0";
+    setTimeout(function(){
+        modal_backdrop.style.display = "none";
+        trash_confirmation.style.display = "none";
+        },200);
+}
+
+function open_modal() {
+    modal_backdrop.style.display = "inline";
+    trash_confirmation.style.display = "inline";
+    setTimeout(function(){
+        modal_backdrop.style.opacity = ".9";
+        trash_confirmation.style.opacity = "1";
+        },200);
+}
+
+function delete_card() {
+    about_to_delete.remove();
+    close_modal();
+}
+
+const tabs = document.querySelectorAll('.tab');
+const speech_bubble = document.querySelectorAll('.speech-bubble');
+
+for (let i = 0; i < 4; i++) {
+    tabs[i].addEventListener('mouseenter', () => {
+        setTimeout(function(){
+            speech_bubble[i].style.opacity = "1";
+            },250);
+    });
+};
+
+for (let i = 0; i < 4; i++) {
+    tabs[i].addEventListener('mouseout', () => {
+        speech_bubble[i].style.opacity = "0";
+});
+};

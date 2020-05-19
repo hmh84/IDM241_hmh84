@@ -10,13 +10,15 @@
 :root {
     --primary-black: #202020;
     --secondary-black: #505050;
+    --primary-gray: #828282;
 
     --red: rgb(197, 6, 6);
     --green: rgb(53, 212, 159);
+    --blue: rgb(0, 131, 245);
 }
 
 [shadow] {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 body {
@@ -55,7 +57,7 @@ body {
     transform: translateY(-4rem);
 }
 
-.card h2 {
+.text-wrapper h2 {
     font-weight: 700;
     margin-bottom: .5rem;
 }
@@ -81,6 +83,32 @@ body {
     color: white;
     float: right;
     font-weight: 700;
+    margin: 0;
+    pointer-events: none;
+}
+
+.speech-bubble {
+    clip-path: polygon(0 20%, 34% 20%, 47% 0, 60% 20%, 100% 20%, 100% 100%, 0 100%);
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
+    z-index: 15;
+    position: absolute;
+    margin: 2rem 0 0 6.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem .5rem .55rem .5rem;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.speech-bubble p {
+    color: var(--red);
+}
+
+#no-speech-bubble {
+    display: none;
 }
 
 #no-tab {
@@ -97,23 +125,31 @@ body {
     justify-content: center;
     align-items: center;
     transform: translateY(-10rem);
-    padding-top: 4rem;
 }
 
-.fog h2 {
+.fog-text-box {
+    height: 70%;
     width: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fog-text {
     opacity: 0;
+    color: var(--primary-black);
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding-top: 2rem;
 }
 
 .icons {
-    height: 2rem;
+    height: 30%;
     width: 200%;
     padding: 0 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 1.5rem;
     opacity: 0;
 }
 
@@ -130,12 +166,25 @@ svg.icon-download, svg.icon-trash {
 
 /* Hover States */
 
-.fog, .icons, .fog h2, .icon-download, .icon-trash {
+.fog, .icons, .fog h2, .icon-download, .icon-trash, .speech-bubble, .card {
     transition: all .25s ease-in-out;
     -webkit-transition: all .25s ease-in-out;
 }
 
+#modal-backdrop, #trash-confirm, #trash-confirm button {
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+}
+
 .card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.fog-text-box:hover .fog-text {
+    color: var(--green);
+}
+
+.card:hover, #trash-options button {
     cursor: pointer;
 }
 
@@ -235,6 +284,78 @@ svg.icon-download, svg.icon-trash {
 
 .note-box-content * {
     color: white;
+}
+
+/* Trash */
+
+#modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--primary-black);
+    opacity: 0;
+    z-index: 20;
+    display: none;
+}
+
+#trash-confirm {
+    position: fixed;
+    height: fit-content;
+    width: 20rem;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    border-radius: .5rem;
+    padding: 1rem;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 25;
+    text-align: center;
+    opacity: 0;
+    display: none;
+}
+
+#trash-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+}
+
+#trash-confirm h1 {
+    font-size: 1.75rem;
+}
+
+#trash-confirm h1, #trash-confirm h2, #trash-confirm button {
+    margin: 1rem 0;
+}
+
+#trash-confirm button {
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+    color: white;
+    text-align: center;
+}
+
+#trash-no {
+    background-color: var(--red);
+    border: var(--red) solid .15rem;
+}
+
+#trash-no:hover {
+    background-color: white;
+    color: var(--red);
+}
+
+#trash-yes {
+    background-color: var(--blue);
+    border: var(--blue) solid .15rem;
+}
+
+#trash-yes:hover {
+    background-color: white;
+    color: var(--blue);
 }
 
 /* Media Queries */

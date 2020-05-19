@@ -1,0 +1,145 @@
+:root {
+    --primary-black: rgb(20, 20, 20);
+    --secondary-black: rgb(30, 30, 30);
+}
+
+* {
+    color: white;
+    font-family: sans-serif;
+}
+
+[shadow] {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+video:focus {
+    outline: none;
+}
+
+video::-webkit-media-controls-volume-slider, video::-webkit-media-controls-mute-button, video::-webkit-media-controls-fullscreen-button {
+    display:none;
+}
+
+body {
+    background-color: var(--primary-black)
+}
+
+header {
+    background-color: var(--secondary-black);
+    height: fit-content;
+    width: 100%;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+#spacer {
+    height: 4.25rem;
+    width: 100%;
+}
+
+/* Main */
+
+main, .side-wrapper, .side, video, #side-sub, .side-sub {
+    width: 100%;
+}
+
+.side-sub h4 {
+    text-decoration: underline;
+}
+
+main {
+    padding: 0 2rem;
+}
+
+main h1, main h2, main h3, main p {
+    margin: 1rem 0;
+}
+
+h1 {
+	text-align: center;
+	margin: 0;
+}
+
+h2 {
+	margin: 2rem 0;
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 1rem;
+}
+
+p {
+    padding-left: 3rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.side-wrapper {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--secondary-black);
+}
+
+.side-wrapper:last-of-type {
+    margin-bottom: 2rem;
+    flex-direction: column-reverse;
+}
+
+.side {
+    padding: 2rem;
+    margin: 0;
+}
+
+#side-no-padd p {
+    padding-left: 0;
+}
+
+#side-no-padd h3 {
+    text-align: center;
+}
+
+#side-sub {
+    display: flex;
+    flex-direction: row;
+    padding-top: 0;
+}
+
+#side-img {
+    display: flex;
+    justify-content: center;
+}
+
+.note-title {
+    color: rgb(53, 212, 159);
+}
+
+.title {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.break {
+    text-align: center;
+}
+
+img {
+    width: 50%;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 800px) {
+    #side-wrapper-1, #side-sub {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 858px) {
+    #spacer {
+        height: 6.5rem;
+    }
+}
