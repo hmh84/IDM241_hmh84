@@ -1,6 +1,7 @@
 :root {
     --primary-black: rgb(20, 20, 20);
     --secondary-black: rgb(30, 30, 30);
+    --green: rgb(53, 212, 159);
 }
 
 * {
@@ -35,14 +36,19 @@ header {
     z-index: 10;
 }
 
-#spacer {
-    height: 4.25rem;
-    width: 100%;
+header h2 {
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
+header a {
+    color: var(--green)
 }
 
 /* Main */
 
-main, .side-wrapper, .side, video, #side-sub, .side-sub {
+main, .side-wrapper, .side, video, [sub], .side-sub {
     width: 100%;
 }
 
@@ -78,15 +84,25 @@ p {
     line-height: 1.5rem;
 }
 
-.side-wrapper {
+.side-wrapper-1, .side-wrapper-2, .side-wrapper-3, .side-wrapper-4 {
+    margin-bottom: 2rem;
+    background-color: var(--secondary-black);
     display: flex;
+    flex-direction: column-reverse;
+}
+
+.side-wrapper-1 {
     flex-direction: row;
     background-color: var(--secondary-black);
 }
 
-.side-wrapper:last-of-type {
-    margin-bottom: 2rem;
-    flex-direction: column-reverse;
+.side-wrapper-3, .side-wrapper-4  {
+    flex-direction: row;
+}
+
+.side-wrapper-3 img, .side-wrapper-4 img {
+    width: 75%;
+    height: auto;
 }
 
 .side {
@@ -102,19 +118,19 @@ p {
     text-align: center;
 }
 
-#side-sub {
+[sub] {
     display: flex;
     flex-direction: row;
     padding-top: 0;
 }
 
-#side-img {
+[img] {
     display: flex;
     justify-content: center;
 }
 
 .note-title {
-    color: rgb(53, 212, 159);
+    color: var(--green)
 }
 
 .title {
@@ -126,20 +142,45 @@ p {
     text-align: center;
 }
 
+h2.title {
+    font-size: 1.5rem;
+    color: var(--green);
+}
+
 img {
-    width: 50%;
+    width: 75%;
+}
+
+#indent {
+    padding-left: 6rem;
+}
+
+/* Hovers */
+
+
+header a {
+    transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+}
+
+header a:hover {
+    color: rgb(28, 106, 80);
 }
 
 /* Media Queries */
 
-@media only screen and (max-width: 800px) {
-    #side-wrapper-1, #side-sub {
+
+@media only screen and (max-width: 1285px) {
+    .side-wrapper-3, .side-wrapper-4 {
         flex-direction: column;
     }
 }
 
-@media only screen and (max-width: 858px) {
-    #spacer {
-        height: 6.5rem;
+@media only screen and (max-width: 800px) {
+    #side-wrapper-1, [sub] {
+        flex-direction: column;
+    }
+    img {
+        width: 100%;
     }
 }

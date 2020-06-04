@@ -35,8 +35,13 @@ header {
     z-index: 10;
 }
 
+header h2 {
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
 #spacer {
-    height: 4.25rem;
     width: 100%;
 }
 
@@ -128,6 +133,16 @@ p {
 
 img {
     width: 50%;
+}
+
+header a {
+    transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    color: rgb(53, 212, 159);;
+}
+
+header a:hover {
+    color: rgb(28, 106, 80);
 }
 
 /* Media Queries */

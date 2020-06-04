@@ -37,6 +37,18 @@ function open_modal() {
 function delete_card() {
     about_to_delete.remove();
     close_modal();
+    cardQtyCheck();
+}
+
+const microint_container = document.querySelector('#microint-container');
+
+function cardQtyCheck() {
+    if (microint_container.children.length == 0) {
+        var para = document.createElement('P');
+        var t = document.createTextNode('No documents to display');
+        para.appendChild(t);
+        microint_container.appendChild(para);
+    }
 }
 
 const tabs = document.querySelectorAll('.tab');

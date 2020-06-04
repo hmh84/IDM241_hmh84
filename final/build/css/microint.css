@@ -25,7 +25,6 @@ body {
     background-color: var(--primary-black);
 }
 
-
 #microint-container {
     background-color: white;
     width: 100%;
@@ -35,6 +34,14 @@ body {
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem;
+}
+
+.lvl-title {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    width: 100%;
 }
 
 .card {
@@ -210,19 +217,23 @@ svg.icon-download, svg.icon-trash {
 
 /* Notes */
 
-#title {
+.title {
     text-align: center;
-    color: white;
+    color: var(--green);
     margin: 2rem 0 0 0;
 }
 
-#notes {
+.notes {
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
     /* padding: 0 2rem; */
+}
+
+[color] {
+    background-color: rgb(47, 47, 47);
 }
 
 .note-box {
@@ -362,6 +373,6 @@ svg.icon-download, svg.icon-trash {
 
 @media only screen and (min-width: 672px) {
     .note-box-content {
-        height: 23rem;
+        height: 419px;
     }
 }
