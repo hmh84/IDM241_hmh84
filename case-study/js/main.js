@@ -67,7 +67,7 @@ for (let i = 0; i < 4; i++) {
             },250);
             setTimeout(function(){
                 speech_bubble[i].style.opacity = "0";
-                },5000);
+                },3000);
     });
 };
 
