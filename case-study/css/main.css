@@ -67,13 +67,8 @@ li {
     font-weight: bold;
 }
 
-#hero {
-    background-image: url(../graphics/hero.png);
-    object-fit: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 10em;
+#hero img {
+    width: 100%;
 }
 
 #intro {
