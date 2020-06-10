@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/microint.css">
+</head>
+<body>
+    <header>
+        <div id="top-nav">
+            <ul>
+                <a href="#top" rel="noopener noreferrer"><li id="active-li">Grammarly</li></a>
+                <a href="http://hunterhdesign.com/portfolio/portfolio.html" target="_blank" rel="noopener noreferrer"><li>Works</li></a>
+            </ul>
+            <ul>
+                <a href="https://www.linkedin.com/in/hunter-hampton" target="_blank" rel="noopener noreferrer"><li>LinkedIn</li></a>
+                <a href="http://hunterhdesign.com/contact/contact.html" target="_blank" rel="noopener noreferrer"><li>Get in touch</li></a>
+            </ul>
+        </div>
+        <div id="hero"></div>
+        <div id="intro">
+            <h1>Case Study</h1>
+            <p>Redesigning Grammarly's document library Micro Interaction</p>
+        </div>
+    </header>
+    <main>
+        <div class="area">
+        <h1>Overview</h1>
+        <p>
+            Grammarly’s current document library is <strong>static</strong>, <strong>unconsidered</strong>, and <strong>doesn’t follow core user experience principals.</strong> Through <strong>4 levels of interaction</strong>, this redesign serves to enhance the existing document library with <strong>foundational design techniques</strong>, <strong></strong>simplicity like its brand</strong>, and <strong>delightful micro interactions</strong>.
+        </p>
+
+        <div class="break"></div>
+        
+        <h1>
+            Context & Challenge
+        </h1>
+        <p>
+            One major problem in terms of User Experience is the ability to make a destructive decisions with just 1 click. In just one click, you delete a document, on top of this, there is no archive/trash section, users must contact Grammarly support to undo this, creating an unsatisfactory experience.
+        </p>
+        
+        <p>
+            I believe in forgiving design, don’t punish users for unintended actions.
+        </p>
+        
+        <p>
+            In terms of visual feedback, the current interaction is very static and there is little motion found. Eased transitions would allow better eye tracking, as well as improve cursor indicative qualities such as knowing which cards, buttons, and icons you are covering over.
+        </p>
+        
+        <div class="break"></div>
+        
+        <h1>
+            Process & Insight
+        </h1>
+        <p>
+            The process of building this multi-layered interaction started by listing out what the current design does, including Triggers, Rules, Feedback, Loops, and Modes. Writing these out in detail help to breakdown what is going on, and what should be.
+        </p>
+        <p>
+            In terms of building the layers, I found it easiest to design the initial state, then the final state, this helps guide the design on how to get top the end.
+        </p>
+        <p>
+            For coding more complicated aspects, I referred to working examples found online to see their process. This jumpstarted my own solutions. Opposite of my my professor suggested, retrofitting online samples, I prefer to build smaller projects from the ground up that way I can fully understand my code and work out issues along the way without having too discover things I did not know were going on.
+        </p>
+        <p>
+            To keep branding and user emotional response consistent, I have chosen a flat, vibrant color theme and simple shapes to maintain the identity of Grammarly, as they do this well.
+        </p>
+        
+        <div class="break"></div>
+        
+        <h1>
+            The Solution
+        </h1>
+
+        <p>
+            By following fundamental web design principals, I incorporated a confirmation page before deleting cards. All transitions take place in 0.2 seconds, to keep process feeling fast, but the eye can follow what is happening.
+        </p>
+        <p>
+            I am much more satisfied having built the interaction in my own way as it caters to my desires better than an online sample.
+        </p>
+
+    </div>
+
+    <div id="microint-title">Interactive Demo</div>
+
+        <div id="microint-container" shadow>
+            <div class="card" shadow>
+                <div class="speech-bubble" shadow>
+                    <p># of issues</p>
+                </div>
+                <div class="card-content">
+                    <div class="tab">
+                        <h2>8</h2>
+                    </div>
+                    <div class="text-wrapper">
+                        <h2>COM 204</h2>
+                        <p>There was a stream where I had been fetching water. A flow station was built nearby and now...</p>
+                    </div>
+                </div>
+                <div class="fog">
+                    <div class="fog-text-box">
+                        <h2 class="fog-text">Open</h2>
+                    </div>
+                    <div class="icons">
+                        <a href="graphics/COM 204.docx" download><svg class="icon-download" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs/><path d="M256 285c11 0 20-9 20-20V20a20 20 0 10-40 0v245c0 11 9 20 20 20z"/><path d="M212 367h1a60 60 0 0084 0l111-110a20 20 0 10-28-28L269 339a20 20 0 01-14 6 20 20 0 01-14-6L132 229a20 20 0 10-28 28l108 110zm280 45c-11 0-20 9-20 20 0 22-18 40-40 40H80c-22 0-40-18-40-40a20 20 0 10-40 0c0 44 36 80 80 80h352c44 0 80-36 80-80 0-11-9-20-20-20z"/></svg></a>
+                        <svg class="icon-trash" xmlns="http://www.w3.org/2000/svg" viewBox="-40 0 427 427"><defs/><path d="M232 155c-5 0-10 4-10 10v189a10 10 0 0020 0V165c0-6-4-10-10-10zm0 0M114 155c-5 0-10 4-10 10v189a10 10 0 0020 0V165c0-6-4-10-10-10zm0 0"/><path d="M28 127v247c0 14 6 28 15 38 9 9 22 15 36 15h189c14 0 26-6 36-15 9-10 14-24 14-38V127a38 38 0 00-9-75h-52V40a39 39 0 00-39-40h-89a39 39 0 00-40 40v12H38a38 38 0 00-10 75zm240 280H79c-17 0-31-15-31-33V128h250v246c0 18-13 33-30 33zM109 40a19 19 0 0120-20h89a19 19 0 0119 20v12H109zM38 72h271a18 18 0 110 36H38a18 18 0 110-36zm0 0"/><path d="M173 155c-5 0-10 4-10 10v189a10 10 0 0020 0V165c0-6-4-10-10-10zm0 0"/></svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card" shadow>
+                <div class="speech-bubble" shadow>
+                    <p># of issues</p>
+                </div>
+                <div class="card-content">
+                    <div class="tab">
+                        <h2>11</h2>
+                    </div>
+                    <div class="text-wrapper">
+                        <h2>ENG 203</h2>
+                        <p>My greatest, my only true possession was my father’s guitar. It was made of fine polished...</p>
+                    </div>
+                </div>
+                <div class="fog">
+                    <div class="fog-text-box">
+                        <h2 class="fog-text">Open</h2>
+                    </div>
+                    <div class="icons">
+                        <a href="graphics/ENG 203.docx" download><svg class="icon-download" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs/><path d="M256 285c11 0 20-9 20-20V20a20 20 0 10-40 0v245c0 11 9 20 20 20z"/><path d="M212 367h1a60 60 0 0084 0l111-110a20 20 0 10-28-28L269 339a20 20 0 01-14 6 20 20 0 01-14-6L132 229a20 20 0 10-28 28l108 110zm280 45c-11 0-20 9-20 20 0 22-18 40-40 40H80c-22 0-40-18-40-40a20 20 0 10-40 0c0 44 36 80 80 80h352c44 0 80-36 80-80 0-11-9-20-20-20z"/></svg></a>
+                        <svg class="icon-trash" xmlns="http://www.w3.org/2000/svg" viewBox="-40 0 427 427"><defs/><path d="M232 155c-5 0-10 4-10 10v189a10 10 0 0020 0V165c0-6-4-10-10-10zm0 0M114 155c-5 0-10 4-10 10v189a10 10 0 0020 0V165c0-6-4-10-10-10zm0 0"/><path d="M28 127v247c0 14 6 28 15 38 9 9 22 15 36 15h189c14 0 26-6 36-15 9-10 14-24 14-38V127a38 38 0 00-9-75h-52V40a39 39 0 00-39-40h-89a39 39 0 00-40 40v12H38a38 38 0 00-10 75zm240 280H79c-17 0-31-15-31-33V128h250v246c0 18-13 33-30 33zM109 40a19 19 0 0120-20h89a19 19 0 0119 20v12H109zM38 72h271a18 18 0 110 36H38a18 18 0 110-36zm0 0"/><path d="M173 155c-5 0-10 4-10 10v189a10 10 0 0020 0V165c0-6-4-10-10-10zm0 0"/></svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card" shadow>
+                <div class="speech-bubble" id="no-speech-bubble" shadow>
+                    <p># of issues</p>
+                </div>
+                <div class="card-content">
+                    <div class="tab" id="no-tab">
+                        <h2>5</h2>
+                    </div>
+                    <div class="text-wrapper">
+                        <h2>PSY 231</h2>
+                        <p>Ambiguous loss is a term coined by Pauline Boss, a University of Minnesota professor, to...</p>
+                    </div>
+                </div>
+                <div class="fog">
+                    <div class="fog-text-box">
+                        <h2 class="fog-text">Open</h2>
+                    </div>
+                    <div class="icons">
+                        <a href="graphics/PSY 231.docx" download><svg class="icon-download" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs/><path d="M256 285c11 0 20-9 20-20V20a20 20 0 10-40 0v245c0 11 9 20 20 20z"/><path d="M212 367h1a60 60 0 0084 0l111-110a20 20 0 10-28-28L269 339a20 20 0 01-14 6 20 20 0 01-14-6L132 229a20 20 0 10-28 28l108 110zm280 45c-11 0-20 9-20 20 0 22-18 40-40 40H80c-22 0-40-18-40-40a20 20 0 10-40 0c0 44 36 80 80 80h352c44 0 80-36 80-80 0-11-9-20-20-20z"/></svg></a>
+                        <svg class="icon-trash" xmlns="http://www.w3.org/2000/svg" viewBox="-40 0 427 427"><defs/><path d="M232 155c-5 0-10 4-10 10v189a10 10 0 0020 0V165c0-6-4-10-10-10zm0 0M114 155c-5 0-10 4-10 10v189a10 10 0 0020 0V165c0-6-4-10-10-10zm0 0"/><path d="M28 127v247c0 14 6 28 15 38 9 9 22 15 36 15h189c14 0 26-6 36-15 9-10 14-24 14-38V127a38 38 0 00-9-75h-52V40a39 39 0 00-39-40h-89a39 39 0 00-40 40v12H38a38 38 0 00-10 75zm240 280H79c-17 0-31-15-31-33V128h250v246c0 18-13 33-30 33zM109 40a19 19 0 0120-20h89a19 19 0 0119 20v12H109zM38 72h271a18 18 0 110 36H38a18 18 0 110-36zm0 0"/><path d="M173 155c-5 0-10 4-10 10v189a10 10 0 0020 0V165c0-6-4-10-10-10zm0 0"/></svg>
+                    </div>
+                </div>
+            </div>
+            <div class="card" shadow>
+                <div class="speech-bubble" shadow>
+                    <p># of issues</p>
+                </div>
+                <div class="card-content">
+                    <div class="tab">
+                        <h2>6</h2>
+                    </div>
+                    <div class="text-wrapper">
+                        <h2>SPE 105</h2>
+                        <p>Cancel culture is a phenomenon that has existed in various forms throughout history. Thus...</p>
+                    </div>
+                </div>
+                <div class="fog">
+                    <div class="fog-text-box">
+                        <h2 class="fog-text">Open</h2>
+                    </div>
+                    <div class="icons">
+                        <a href="graphics/SPE 105.docx" download><svg class="icon-download" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><defs/><path d="M256 285c11 0 20-9 20-20V20a20 20 0 10-40 0v245c0 11 9 20 20 20z"/><path d="M212 367h1a60 60 0 0084 0l111-110a20 20 0 10-28-28L269 339a20 20 0 01-14 6 20 20 0 01-14-6L132 229a20 20 0 10-28 28l108 110zm280 45c-11 0-20 9-20 20 0 22-18 40-40 40H80c-22 0-40-18-40-40a20 20 0 10-40 0c0 44 36 80 80 80h352c44 0 80-36 80-80 0-11-9-20-20-20z"/></svg></a>
+                        <svg class="icon-trash" xmlns="http://www.w3.org/2000/svg" viewBox="-40 0 427 427"><defs/><path d="M232 155c-5 0-10 4-10 10v189a10 10 0 0020 0V165c0-6-4-10-10-10zm0 0M114 155c-5 0-10 4-10 10v189a10 10 0 0020 0V165c0-6-4-10-10-10zm0 0"/><path d="M28 127v247c0 14 6 28 15 38 9 9 22 15 36 15h189c14 0 26-6 36-15 9-10 14-24 14-38V127a38 38 0 00-9-75h-52V40a39 39 0 00-39-40h-89a39 39 0 00-40 40v12H38a38 38 0 00-10 75zm240 280H79c-17 0-31-15-31-33V128h250v246c0 18-13 33-30 33zM109 40a19 19 0 0120-20h89a19 19 0 0119 20v12H109zM38 72h271a18 18 0 110 36H38a18 18 0 110-36zm0 0"/><path d="M173 155c-5 0-10 4-10 10v189a10 10 0 0020 0V165c0-6-4-10-10-10zm0 0"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="area">
+
+        <div class="break"></div>
+
+        <h1>
+            The Results
+        </h1>
+
+        <p id="the-last-p">
+            The solution to the problems and preferences mentioned at the beginning was a 4 layer system of interactions that <strong>give the user seamless usability</strong>, <strong>confidence</strong> in their operation, and a <strong>delightful experience</strong> using solid styles and transitions.
+        </p>
+
+    </div>
+
+    </main>
+    <div id="modal-backdrop"></div>
+    <div id="trash-confirm" shadow>
+        <h1>Are you sure?</h1>
+        <h2>You cannot undo this.</h2>
+        <div id="trash-options">
+            <button id="trash-no" shadow>
+                Cancel
+            </button>
+            <button id="trash-yes" shadow>
+                Trash
+            </button>
+        </div>
+    </div>
+</body>
+<script src="js/main.js"></script>
+</html>

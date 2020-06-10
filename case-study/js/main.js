@@ -1,3 +1,5 @@
+// Micro Interaction
+
 const trash_icon = document.querySelectorAll('.icon-trash');
 const trash_confirmation = document.querySelector('#trash-confirm');
 const modal_backdrop = document.querySelector('#modal-backdrop');
@@ -47,6 +49,7 @@ function cardQtyCheck() {
         var para = document.createElement('P');
         var t = document.createTextNode('No documents to display');
         para.appendChild(t);
+        para.setAttribute('id', 'no-docs-p');
         microint_container.appendChild(para);
     }
 }

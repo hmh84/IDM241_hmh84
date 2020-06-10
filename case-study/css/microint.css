@@ -7,16 +7,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
-[shadow] {
-    box-shadow: 0, 0 6px 20px 0 rgba(0, 0, 0, 0.2) 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+:root {
+    --primary-black: #202020;
+    --secondary-black: #505050;
+    --primary-gray: #828282;
 }
 
-body {
-    background-color: var(--primary-black);
+[shadow] {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 #microint-container {
-    background-color: white;
+    background-color: var(--primary-black);
     width: 100%;
     height: fit-content;
     display: flex;
@@ -24,6 +26,12 @@ body {
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem;
+}
+
+#no-docs-p {
+    color: white;
+    width: 100%;
+    text-align: center;
 }
 
 .lvl-title {
@@ -39,6 +47,7 @@ body {
     height: 10rem;
     overflow: hidden;
     margin: 1rem;
+    background-color: white;
 }
 
 .card-content {
@@ -57,6 +66,12 @@ body {
 .text-wrapper h2 {
     font-weight: 700;
     margin-bottom: .5rem;
+}
+
+.card h1, .card p {
+    margin: 0;
+    line-height: 1.1rem;
+    padding: 0;
 }
 
 .card p {
@@ -157,7 +172,7 @@ body {
 }
 
 svg.icon-download, svg.icon-trash {
-    width: 2.5rem;
+    width: 2rem;
     height: 2rem;
 }
 
@@ -203,88 +218,6 @@ svg.icon-download, svg.icon-trash {
 
 .icon-trash:hover {
     fill: var(--red);
-}
-
-/* Notes */
-
-.title {
-    text-align: center;
-    color: var(--green);
-    margin: 2rem 0 0 0;
-}
-
-.notes {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    /* padding: 0 2rem; */
-}
-
-[color] {
-    background-color: rgb(47, 47, 47);
-}
-
-.note-box {
-    width: 20rem;
-    border-radius: .75rem;
-    margin: 2rem .5rem;
-}
-
-:root {
-    --radius: .75rem;
-    /* Standard radius for all Note Box borders */
-}
-
-.note-box-title {
-    padding: .5rem;
-    background-color: var(--green);
-    border-radius: var(--radius) var(--radius) 0 0;
-}
-
-.note-box-title h3 {
-    text-align: center;
-    color: white;
-    font-weight: bold;
-}
-
-.note-box-content p {
-    line-height: 1.5rem;
-    padding-left: 1rem;
-}
-
-.note-box-content {
-    padding: 1rem;
-    border: 3px var(--green) dashed;
-    border-top: none;
-    border-radius: 0 0 var(--radius) var(--radius);
-    height: fit-content;
-}
-
-.note-box-content h3:first-of-type {
-    margin: 0 0 .75rem;
-}
-
-.note-box-content h3 {
-    text-align: center;
-    font-weight: bold;
-    color: var(--green);
-    margin: .75rem 0;
-}
-
-.note-box-content h4 {
-    font-weight: bold;
-    margin: .75rem 0;
-}
-
-.note-box-content h5 {
-    margin: .75rem 0;
-    text-decoration: underline;
-}
-
-.note-box-content * {
-    color: white;
 }
 
 /* Trash */
@@ -357,12 +290,4 @@ svg.icon-download, svg.icon-trash {
 #trash-yes:hover {
     background-color: white;
     color: var(--blue);
-}
-
-/* Media Queries */
-
-@media only screen and (min-width: 672px) {
-    .note-box-content {
-        height: 419px;
-    }
 }
