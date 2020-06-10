@@ -10,6 +10,7 @@
     --green: rgb(53, 212, 159);
     --red: rgb(197, 6, 6);
     --blue: rgb(0, 131, 245);
+    --orange: rgb(255, 106, 0);
 }
 
 .area {
@@ -27,6 +28,7 @@ header {
     height: 4rem;
     background-color: white;
     margin-bottom: 5%;
+    overflow-x: scroll;
 }
 
 header a {
@@ -39,6 +41,12 @@ header a {
     text-decoration: none;
 }
 
+p a {
+    color: var(--green);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
 ul {
     display: flex;
     flex-direction: row;
@@ -48,6 +56,7 @@ ul {
 
 li {
     display: flex;
+    width: max-content;
     align-items: center;
     padding: 0 2rem;
     color: black;
@@ -91,15 +100,16 @@ main h1, main p {
     margin: 2rem 0;
 }
 
-p {
+p, #intro h1 {
     padding: 0 5%;
 }
 
 main h1 {
     background-color: var(--red);
     color: white;
-    padding: 1rem 1.5rem;
+    padding: 1rem 2rem;
     width: fit-content;
+    clip-path: polygon(1.5rem 0%, 100% 0%, calc(100% - 1.5rem) 100%, 0% 100%);
 }
 
 main p {
@@ -115,8 +125,12 @@ main h1:first-of-type {
 }
 
 strong {
-    /* font-size: 110%; */
     color: var(--blue);
+}
+
+.quote {
+    text-align: center;
+    font-style: italic;
 }
 
 .break {
@@ -126,26 +140,93 @@ strong {
     margin: 2rem auto;
 }
 
-#microint-title svg {
-    width: 1.2rem;
-    margin: 0 0 0 .75rem;
-    fill: white;
+/* Specific */
+
+video {
+    width: 50%;
+    display: flex;
+    margin: auto;
 }
 
-#microint-title {
-    margin-left: 5%;
+#four-levels img {
+    width: 100%;
+}
+
+#four-levels p {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#float {
     display: flex;
-    background-color: var(--primary-black);
-    height: fit-content;
-    width: fit-content;
-    padding: .5rem 1rem;
-    border-radius: .25rem .25rem 0 0;
-    color: white;
+    flex-direction: row;
+}
+
+.float-box:first-of-type {
+    margin-right: 2rem;
+}
+
+.float-box {
+    width: 50%;
+}
+
+span, span div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+span {
+    justify-content: space-between;
+}
+
+span h1, span p {
+    margin: 0;
+}
+
+span p {
+    padding: 0 .5rem;
+    width: 10rem;
+}
+
+.blue-ball {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background-color: var(--blue);
+    margin-left: 5%;
+}
+
+.orange-ball {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    background-color: var(--orange);
+}
+
+.blue-text {
+    color: var(--blue);
+    padding: .5rem;
+}
+
+.green-text {
+    color: var(--green);
+    text-align: center;
+    font-weight: bold;
+}
+
+.blue-text {
+    color: var(--blue);
+}
+
+.orange-text {
+    color: var(--orange);
 }
 
 /* Hover States */
 
-header a, header li {
+header a, header li, p a {
     transition: all .25s ease-in-out;
     -webkit-transition: all .25s ease-in-out;
 }
@@ -153,4 +234,29 @@ header a, header li {
 header a:hover {
     background-color: var(--medium-gray);
     color: var(--dark-gray);
+}
+
+p a:hover {
+    color: var(--dark-gray);
+    text-decoration: none;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 500px) {
+    span {
+        flex-direction: column;
+    }
+
+    span div {
+        margin: 1rem 0;
+    }
+
+    #float {
+        flex-direction: column;
+    }
+
+    #float div {
+        width: 100%;
+    }
 }

@@ -1,3 +1,6 @@
+vid = document.getElementById("vid");
+vid.disablePictureInPicture = true;
+
 // Micro Interaction
 
 const trash_icon = document.querySelectorAll('.icon-trash');

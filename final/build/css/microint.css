@@ -7,8 +7,18 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+:root {
+    --primary-black: #202020;
+    --secondary-black: #505050;
+    --primary-gray: #828282;
+
+    --red: rgb(197, 6, 6);
+    --green: rgb(53, 212, 159);
+    --blue: rgb(0, 131, 245);
+}
+
 [shadow] {
-    box-shadow: 0, 0 6px 20px 0 rgba(0, 0, 0, 0.2) 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 body {
