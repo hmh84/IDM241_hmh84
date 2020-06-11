@@ -158,12 +158,9 @@ video {
     flex-direction: row;
 }
 
-.float-box:first-of-type {
-    margin-right: 2rem;
-}
-
 .float-box {
     width: 50%;
+    padding: 1rem;
 }
 
 span, span div {
