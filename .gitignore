@@ -1,6 +1,11 @@
-# General
-.DS_Store
 *.DS_Store
+*.DS_Store?
+node_modules/
+dist/*
+!dist/graphics
+db.php
+
+# General
 .AppleDouble
 .LSOverride
 .DS_Store?
